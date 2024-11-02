@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Designs Showcase</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to ZET & JAY C Interior Designs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Message Section -->
+    <main id="home">
+        <section id="welcome">
+            <h2>Your Dream Space Awaits!</h2>
+            <p>Explore our collection of exquisite interior designs, from elegant TV stands to stylish kitchen cabinets.</p>
+        </section>
+
+        <!-- Showcase Section -->
+        <section id="showcase">
+            <h2>Featured Designs</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/Kitchen 1.jpg" alt="Design 1" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/TV stand 1.jpg" alt="Design 2" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/Kitchen 2.jpg" alt="Design 3" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/TV stand 2.jpg" alt="Design 4" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/TV stand 3.jpg" alt="Design 5" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 ZET & JAY C Interior Designs. All rights reserved.</p>
+        <p><a href="https://www.papilloninteriors.co.za/" target="_blank">Visit Papillon Interiors</a></p>
+    </footer>
+
+    <!-- Slideshow Script -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</body>
+</html>
